@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:otagu_app/routes.dart';
-import 'package:otagu_app/views/login_screen.dart';
-
 
 
 void main() => runApp(MyApp());

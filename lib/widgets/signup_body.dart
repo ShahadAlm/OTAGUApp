@@ -2,12 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:otagu_app/requests/APIs.dart';
-import 'package:otagu_app/services/databasehelper.dart';
 import 'package:otagu_app/styles/constants.dart';
 import 'package:otagu_app/widgets/already_have_an_account_acheck.dart';
 import 'package:otagu_app/views/login_screen.dart';
-import 'package:giffy_dialog/giffy_dialog.dart';
 import 'package:otagu_app/views/home_page.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';

@@ -8,11 +8,11 @@ class FirstFilter extends StatefulWidget {
 
 class _FirstFilterState extends State<FirstFilter> {
   int selectedFilter = 0;
-  List<String> FirstFilter = ["New Releases", "Just Added", "Coming Soon"];
+  List<String> FirstFilter = ["TV", "ANIMATION", "GAMES"];
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: firstDefaultPadding / 2),
+      margin: EdgeInsets.symmetric(vertical: 15.0 / 2),
       height: 50,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
@@ -24,7 +24,7 @@ class _FirstFilterState extends State<FirstFilter> {
 
   Padding buildCategory(int index, BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: firstDefaultPadding),
+      padding: const EdgeInsets.symmetric(horizontal: 15.0),
       child: GestureDetector(
         onTap: () {
           setState(() {
@@ -38,19 +38,21 @@ class _FirstFilterState extends State<FirstFilter> {
               FirstFilter[index],
               style: Theme.of(context).textTheme.headline.copyWith(
                     fontWeight: FontWeight.w600,
-                    fontSize: 15,
+                    fontSize: 25,
                     color: index == selectedFilter
-                        ? kTextColor
+                        ? Colors.white
                         : Colors.white.withOpacity(0.4),
                   ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(vertical: firstDefaultPadding / 2),
+              margin: EdgeInsets.symmetric(vertical: 15.0 / 2),
               height: 6,
               width: 40,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: index == selectedFilter ? orange : Colors.transparent,
+                color: index == selectedFilter
+                    ? kPrimaryColor
+                    : Colors.transparent,
               ),
             )
           ],

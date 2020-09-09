@@ -14,7 +14,7 @@ description: A new Flutter project.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">2.6.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -37,7 +37,9 @@ dependencies:
   flutter_spinkit: ^4.1.2+1
   giffy_dialog: ^1.8.0
   material_design_icons_flutter: ^4.0.5345
-  
+  flutter_svg: ^0.18.1
+  smooth_star_rating: ^1.1.1
+  flutter_rating_bar: ^3.0.1+1
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -54,6 +56,8 @@ flutter:
    - assets/img/WallPaper.jpg
    - assets/img/profileImg.jpg
    - assets/img/giphy.gif
+   - assets/icons/star.svg
+   - assets/icons/star_fill.svg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

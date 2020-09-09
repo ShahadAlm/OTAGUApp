@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:otagu_app/styles/constants.dart';
 import 'drawer_header_content.dart';
+
 //I think I should change this to stateful widget!
 class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     var screenHeight = MediaQuery.of(context).size.height;
     //ClipRRect to make the drawer corner circular
-    return  ClipRRect(
+    return ClipRRect(
       borderRadius: BorderRadius.only(
         topRight: Radius.circular(100.0),
         // bottomRight: Radius.circular(100.0),
       ),
-      child:
-      Drawer(
+      child: Drawer(
         elevation: 20.0,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -21,115 +21,46 @@ class MyDrawer extends StatelessWidget {
             SizedBox(
               height: screenHeight / 2 * 0.7,
               child: DrawerHeader(
-                decoration: new BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("assets/img/WallPaper.jpg"),
-                      fit: BoxFit.fill),
-                ),
+                decoration: new BoxDecoration(color: kPrimaryColor),
                 child: DrawerHeaderContent(),
               ),
             ),
             Expanded(
-              child: ListView(children: <Widget>[
-                ListTile(
-                  title: Text("Notifications"),
-                  trailing: Icon(Icons.notifications, color: Colors.deepOrange),
-                  onTap: () {
-                    // Pushing a named route
-                    //Navigator.of(context).pushNamed(
-                      //'/notificationPage',
-                      //if we want to push data we push data in argument
-                      //arguments: '',
-                //    );
-
-                  },
-                ),
-                new Divider(height: 5.0),
-                ListTile(
-                  title: Text(
-                    "Interests",
+              child: ListView(
+                children: <Widget>[
+                  ListTile(
+                    title: Text(
+                      "Collection / My Rating",
+                    ),
+                    trailing: Icon(
+                      Icons.lightbulb_outline,
+                      color: Colors.deepOrange,
+                    ),
+                    onTap: () {
+                      // Pushing a named route
+                      // Navigator.of(context).pushNamed(
+                      // );
+                    },
                   ),
-                  trailing: Icon(
-                    Icons.lightbulb_outline,
-                    color: Colors.deepOrange,
-                  ),
-                  onTap: () {
-                    // Pushing a named route
-                    Navigator.of(context).pushNamed(
-                      '/InterestPage',
-                      //if we want to push data we push data in argument
-                      //arguments: '',
-                    );
-                  },
-                ),
-                new Divider(height: 5.0),
-                ListTile(
-                  onTap: () {
-                    // Pushing a named route
-                    //Navigator.of(context).pushNamed(
-                  //    '/WalletAndCoinsPage',
-                      //if we want to push data we push data in argument
-                      //arguments: '',
-                 //   );
-                  },
-                  title: Text(
-                    "Wallet/Coins",
-                  ),
-                  trailing: Icon(Icons.account_balance_wallet,
-                      color: Colors.deepOrange),
+                  new Divider(height: 5.0),
+                  ListTile(
+                    title: Text(
+                      "العربية",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    leading: Text("Language"),
+                    //subtitle: Text("العربية"),
 
-                  subtitle: Text(
-                    "0 SR",
+                    trailing: Icon(Icons.language, color: Colors.deepOrange),
                   ),
-                ),
-                new Divider(height: 5.0),
-                ListTile(
-                  title: Text(
-                    "About OTAGU",
+                  new Divider(height: 5.0),
+                  ListTile(
+                    title: Text("Logout"),
+                    trailing: Icon(Icons.power_settings_new,
+                        color: Colors.deepOrange),
                   ),
-                  trailing: Icon(
-                    Icons.accessibility,
-                    color: Colors.deepOrange,
-                  ),
-                  onTap: () {
-
-                  },
-                ),
-                new Divider(height: 5.0),
-                ListTile(
-                  title: Text("Settings"),
-                  trailing: Icon(Icons.settings, color: Colors.deepOrange),
-                ),
-                new Divider(height: 5.0),
-                ListTile(
-                  title: Text("Privacy/policy"),
-                  trailing:
-                  Icon(Icons.branding_watermark, color: Colors.deepOrange),
-                ),
-                new Divider(height: 5.0),
-                ListTile(
-                  title: Text("Contact Us"),
-                  trailing: Icon(Icons.contact_mail, color: Colors.deepOrange),
-                ),
-                new Divider(height: 5.0),
-                ListTile(
-                  title: Text(
-                    "العربية",
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  leading: Text("Language"),
-                  //subtitle: Text("العربية"),
-
-                  trailing: Icon(Icons.language, color: Colors.deepOrange),
-                ),
-                ListTile(
-                  title: Text("Sign up"),
-//                trailing: Icon(Icons.out, color: Colors.deepOrange),
-                ),
-
-
-
-              ],),
+                ],
+              ),
             )
           ],
         ),
@@ -252,9 +183,5 @@ class MyDrawer extends StatelessWidget {
 //            ],
 //          ),
     );
-
   }
-
-
-
 }

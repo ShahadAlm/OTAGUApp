@@ -3,12 +3,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:otagu_app/styles/constants.dart';
 import 'package:otagu_app/widgets/already_have_an_account_acheck.dart';
-import 'package:otagu_app/widgets/rounded_button.dart';
 import 'package:otagu_app/views/home_page.dart';
 import 'package:otagu_app/views/signup_screen.dart';
-import 'package:otagu_app/services/databasehelper.dart';
 import 'package:http/http.dart' as http;
-import 'package:otagu_app/requests/APIs.dart';
 
 class Body extends StatefulWidget {
   @override

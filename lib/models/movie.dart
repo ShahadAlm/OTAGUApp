@@ -1,11 +1,11 @@
-class Item {
+class Movie {
   final int id, year, numOfRatings, criticsReview, metascoreRating;
   final double rating;
-  final List<String> category;
+  final List<String> genra;
   final String plot, title, poster, backdrop;
   final List<Map> cast;
 
-  Item({
+  Movie({
     this.poster,
     this.backdrop,
     this.title,
@@ -15,116 +15,116 @@ class Item {
     this.criticsReview,
     this.metascoreRating,
     this.rating,
-    this.category,
+    this.genra,
     this.plot,
     this.cast,
   });
 }
 
 // our demo data movie data
-List<Item> items = [
-  Item(
+List<Movie> movies = [
+  Movie(
     id: 1,
-    title: "With an e",
-    year: 2020,
+    title: "Joker",
+    year: 2019,
     poster: "assets/img/joker.jpg",
-    backdrop: "",
+    backdrop: "assets/images/backdrop_1.jpg",
     numOfRatings: 150212,
     rating: 7.3,
     criticsReview: 50,
     metascoreRating: 76,
-    category: ["Action", "Drama"],
+    genra: ["Action", "Drama"],
     plot: plotText,
     cast: [
       {
-        "orginalName": "LaLa",
-        "movieName": "Anne",
-        "image": "assets/img/WallPaper.jpg",
+        "orginalName": "James Mangold",
+        "movieName": "Director",
+        "image": "assets/images/actor_1.png",
       },
       {
         "orginalName": "Matt Damon",
         "movieName": "Carroll",
-        "image": "assets/img/joker.jpg",
+        "image": "assets/images/actor_2.png",
       },
       {
         "orginalName": "Christian Bale",
         "movieName": "Ken Miles",
-        "image": "assets/img/joker.jpg",
+        "image": "assets/images/actor_3.png",
       },
       {
         "orginalName": "Caitriona Balfe",
         "movieName": "Mollie",
-        "image": "assets/img/joker.jpg",
+        "image": "assets/images/actor_4.png",
       },
     ],
   ),
-  Item(
+  Movie(
     id: 2,
-    title: "Ford v Ferrari",
+    title: "Ford v Ferrari ",
     year: 2019,
-    poster: "assets/img/joker.jpg",
-    backdrop: "assets/img/joker.jpg",
+    poster: "assets/images/poster_2.jpg",
+    backdrop: "assets/images/backdrop_2.jpg",
     numOfRatings: 150212,
     rating: 8.2,
     criticsReview: 50,
     metascoreRating: 76,
-    category: ["Action", "Biography", "Drama"],
+    genra: ["Action", "Biography", "Drama"],
     plot: plotText,
     cast: [
       {
         "orginalName": "James Mangold",
         "movieName": "Director",
-        "image": "assets/img/joker.jpg",
+        "image": "assets/images/actor_1.png",
       },
       {
         "orginalName": "Matt Damon",
         "movieName": "Carroll",
-        "image": "assets/img/joker.jpg",
+        "image": "assets/images/actor_2.png",
       },
       {
         "orginalName": "Christian Bale",
         "movieName": "Ken Miles",
-        "image": "assets/img/joker.jpg",
+        "image": "assets/images/actor_3.png",
       },
       {
         "orginalName": "Caitriona Balfe",
         "movieName": "Mollie",
-        "image": "assets/img/joker.jpg",
+        "image": "assets/images/actor_4.png",
       },
     ],
   ),
-  Item(
+  Movie(
     id: 1,
     title: "Onward",
     year: 2020,
-    poster: "assets/img/joker.jpg",
-    backdrop: "assets/img/WallPaper.jpg",
+    poster: "assets/images/poster_3.jpg",
+    backdrop: "assets/images/backdrop_3.jpg",
     numOfRatings: 150212,
     rating: 7.6,
     criticsReview: 50,
     metascoreRating: 79,
-    category: ["Action", "Drama"],
+    genra: ["Action", "Drama"],
     plot: plotText,
     cast: [
       {
         "orginalName": "James Mangold",
         "movieName": "Director",
-        "image": "assets/img/joker.jpg",
+        "image": "assets/images/actor_1.png",
       },
       {
         "orginalName": "Matt Damon",
         "movieName": "Carroll",
-        "image": "assets/img/joker.jpg",
+        "image": "assets/images/actor_2.png",
       },
       {
         "orginalName": "Christian Bale",
         "movieName": "Ken Miles",
-        "image": "assets/img/joker.jpg",
+        "image": "assets/images/actor_3.png",
       },
       {
         "orginalName": "Caitriona Balfe",
         "movieName": "Mollie",
-        "image": "assets/img/joker.jpg",
+        "image": "assets/images/actor_4.png",
       },
     ],
   ),
