@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:otagu_app/styles/constants.dart';
 import 'package:otagu_app/views/home_page.dart';
 import 'package:otagu_app/widgets/rounded_button.dart';
 
 class DetailsBody extends StatefulWidget {
   DetailsBody() : super();
-
-  final String title = "Collpasable Appbar Demo";
 
   @override
   DetailsBodyState createState() => DetailsBodyState();
@@ -109,19 +108,19 @@ class DetailsBodyState extends State<DetailsBody> {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  actions: [
-                    IconButton(
-                      icon: Icon(Icons.close),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => HomePage(),
-                          ),
-                        );
-                      },
-                    ),
-                  ],
+                  // actions: [
+                  //   IconButton(
+                  //     icon: Icon(Icons.close),
+                  //     onPressed: () {
+                  //       Navigator.push(
+                  //         context,
+                  //         MaterialPageRoute(
+                  //           builder: (context) => HomePage(),
+                  //         ),
+                  //       );
+                  //     },
+                  //   ),
+                  // ],
                 )
               ];
             },
@@ -137,9 +136,18 @@ class DetailsBodyState extends State<DetailsBody> {
                   Container(
                     margin: EdgeInsets.symmetric(vertical: 10),
                     padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                    child: Text(
+                    child: Column(
+                      children: <Widget>[
+                        SvgPicture.asset(
+                        "assets/icons/star_fill.svg",
+                        height: 20,
+                      ),
+                      
+                      SizedBox(width: firstDefaultPadding / 2),
+                        Text(
                       "Rating: $_rating",
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(fontWeight: FontWeight.bold),)
+                      ]
                     ),
                   ),
                   Container(
